@@ -344,9 +344,9 @@ npm install
 :black_small_square: **_Run the project based on the ```package.json``` start script_**
 
 ````
-
+```
 npm start
 
 ```
 
-```
+
