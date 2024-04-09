@@ -1,7 +1,7 @@
 import * as dotenv from "dotenv";
 dotenv.config();
 import express, { Express } from "express";
-import mongoose from "mongoose";
+import mongoose, { mongo } from "mongoose";
 import cors from "cors";
 import todoRoutes from "./routes";
 import bodyParser from "body-parser";
@@ -19,6 +19,8 @@ const uri: string = `${process.env.DATABASE}`;
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 mongoose.set("useFindAndModify", false);
 
+
+// mongoDB connection
 mongoose
   .connect(uri, options)
   .then(() =>
